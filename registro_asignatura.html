@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Asignatura</title>
+    <link rel="stylesheet" href="styles.css"><!-- Enlace al archivo de estilos -->
+    <link rel="icon" href="img/perfil.png">
+    <script src="scripts.js" defer></script><!-- Enlace al archivo de scripts JavaScript -->
+</head>
+<body>
+    <header>
+        <img class="logo" src="img/LOGO-ULEAM-VERTICAL.png" alt=""> <!-- Imagen del logo -->
+        <h1>Registro de Asignatura</h1>
+        <button type="button" onclick="history.back()">Volver</button> <!-- Botón para volver atrás -->
+    </header>
+    <main>
+        <form id="asignaturaForm" onsubmit="return validateAsignatura()">
+
+            <div style="text-align: center;">
+            <img class="img-fondologin" src="img/pngcomputerlogo.png" alt="" style="width: 200px; height: auto;">
+            </div>
+            <label for="codigo">Código De La Asignatura:</label>
+            <input type="text" id="codigo" name="codigo" required>
+
+            <label for="nombre">Nombre De La Asignatura:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="carrera">Carrera:</label>
+            <input type="text" id="carrera" name="carrera" required>
+
+            <label for="periodo">Periodo Académico:</label>
+            <input type="text" id="periodo" name="periodo" required>
+
+            <label for="modalidad">Modalidad:</label>
+            <select id="modalidad" name="modalidad" required>
+                <option value="presencial">Presencial</option>
+                <option value="virtual">Virtual</option>
+            </select>
+
+            <label for="sede">Sede:</label>
+            <input type="text" id="sede" name="sede" required>
+
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha" required>
+
+            <label for="tipo_matricula">Tipo de Matrícula:</label>
+            <select id="tipo_matricula" name="tipo_matricula" required>
+                <option value="ordinaria">Ordinaria</option>
+                <option value="extraordinaria">Extraordinaria</option>
+                <option value="especial">Especial</option>
+            </select>
+
+            <button type="submit">Registrar</button> <!-- Botón de enviar -->
+            <button type="button" onclick="resetForm()">Cancelar</button> <!-- Botón de cancelar -->
+        </form>
+    </main>
+
+    <div class="fondologin">
+        <img class="img-fondologin" src="img/EL-SILABO-2-2048.png" alt="">
+    </div>
+
+
+    <footer>
+        <p>&copy; Software de automatización de sílabos para la ULEAM - Todos los derechos reservados</p> 
+        <!-- Pie de página con el año y el nombre de la institución -->
+        <img class="redes-sociales" src="img/redes-sociales.png"> <!-- Logo de la ULEAM -->
+    </footer>
+    <script>
+        // Función para volver a la página de inicio
+        function goToHome() {
+            window.location.href = "index.html"; // Redirige al usuario al inicio
+        }
+
+        // Función para resetear el formulario
+        function resetForm() {
+            document.getElementById('asignaturaForm').reset(); // Resetea el formulario
+        }
+    </script>
+</body>
+</html>
+

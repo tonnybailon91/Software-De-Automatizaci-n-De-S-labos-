@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo de estilos -->
+    <link rel="icon" href="img/perfil.png">
+    <script src="scripts.js" defer></script> <!-- Enlace al archivo de scripts JavaScript -->
+</head>
+<body>
+    <header>
+        <img class="logo" src="img/LOGO-ULEAM-VERTICAL.png" alt=""> <!-- Imagen del logo -->
+        <h1>Iniciar Sesión</h1> <!-- Título de la página -->
+        <button onclick="goToHome()">Volver</button> <!-- Botón para volver al inicio -->
+    </header>
+  
+    <main>
+        <form id="loginForm" onsubmit="return validateLogin()"> <!-- Formulario de inicio de sesión -->
+            <div style="text-align: center;">
+            <img class="img-fondologin" src="img/png-clipartblue.png" alt="" style="width: 200px; height: auto;">
+            </div>
+            <label for="username">Usuario:</label>
+            <input type="text" id="username" name="username" required> <!-- Campo para el nombre de usuario -->
+
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required> <!-- Campo para la contraseña -->
+
+            <div class="forgot-password">
+                <a href="forgot_username.html">¿Ha olvidado su Usuario?</a><br>
+                <a href="forgot_password.html">¿Ha olvidado su Contraseña?</a>
+            </div>
+           
+            <button type="submit">Ingresar</button> <!-- Botón de enviar -->
+            <button type="button" onclick="resetForm()">Cancelar</button> <!-- Botón de cancelar -->
+        </form>
+    </main>
+
+    <div class="fondologin">
+        <img class="img-fondologin" src="img/EL-SILABO-2-2048.png" alt="">
+    </div>
+
+    <footer>
+        <p>&copy; Software de automatización de sílabos para la ULEAM - Todos los derechos reservados</p> <!-- Pie de página con el año y el nombre de la institución -->
+    <img class="redes-sociales" src="img/redes-sociales.png"> <!-- Logo de la ULEAM -->
+    </footer>
+    
+    <script>
+        function goToHome() {
+            window.location.href = "index.html"; // Redirige al usuario al inicio
+        }
+        function resetForm() {
+            document.getElementById('loginForm').reset(); // Resetea el formulario
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Página Principal</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo de estilos -->
+    <link rel="icon" href="img/Formulario_Registro.png">
+</head>
+<body>
+    <header>
+        <img class="logo" src="img/LOGO-ULEAM-VERTICAL.png" alt="Logo ULEAM">
+        <h1>Bienvenido a la Plataforma de Sílabos - ULEAM</h1> <!-- Título de la página -->
+        <a href="#" onclick="logout()" class="logout">Cerrar Sesión</a> <!-- Enlace para cerrar sesión -->
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="openModal()">Administrador</a></li> <!-- Enlace al modal de administrador -->
+            <li><a href="docentes.html">Docentes</a></li> <!-- Enlace a la interfaz de docentes -->
+            <li><a href="estudiantes.html">Estudiantes</a></li> <!-- Enlace a la interfaz de estudiantes -->
+        </ul>
+        
+    </nav>
+    <div class="portada">
+        <img class="img-port" src="img/EL-SILABO3-2048.png" alt="">
+        <img class="img-port" src="img/EL-SILABO-6-2048.png" alt="">
+        <img class="img-port" src="img/EL-SILABO7-2048.png" alt="">
+    </div>
+    <footer>
+        <img class="LOGO-ULEAM-VERTICAL" src="img/whatsapp.png"> <!-- Logo de la ULEAM -->
+        <p>&copy; Software de automatización de sílabos para la ULEAM - Todos los derechos reservados</p> <!-- Pie de página con el año y el nombre de la institución -->
+        <img class="redes-sociales" src="img/redes-sociales.png"> <!-- Logo de la ULEAM -->
+    </footer>
+
+    <!-- Modal de inicio de sesión -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Inicio de Sesión</h2>
+            <form id="loginForm" onsubmit="return validateLogin()">
+                <label for="username">Usuario:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Ingresar</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function logout() {
+            // Aquí puedes agregar la lógica para cerrar sesión, como limpiar el almacenamiento local o eliminar cookies
+            // Después de cerrar sesión, redirige al usuario a la página anterior
+            window.history.back();
+        }
+
+        function openModal() {
+            document.getElementById("loginModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("loginModal").style.display = "none";
+        }
+
+        function validateLogin() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Reemplaza con tus credenciales de administrador
+            var adminUsername = "admin";
+            var adminPassword = "admin";
+
+            if (username === adminUsername && password === adminPassword) {
+                // Redirige a la página de administrador
+                window.location.href = "admin.html";
+            } else {
+                alert("Usuario o contraseña incorrectos");
+            }
+            return false; // Previene el envío del formulario
+        }
+
+        // Cierra el modal al hacer clic fuera de él
+        window.onclick = function(event) {
+            var modal = document.getElementById("loginModal");
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
+

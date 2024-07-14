@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Generación de Reporte o Informes</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script> <!-- Enlace al archivo de scripts JavaScript -->
+    <link rel="icon" href="img/tutor.png">
+    <script>
+        function cancelarFormulario() {
+            document.getElementById('role').selectedIndex = 0; // Restablece el select 'role' al primer índice
+            document.getElementById('periodo').value = ''; // Borra el contenido del campo 'periodo'
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img class="logo" src="img/LOGO-ULEAM-VERTICAL.png" alt=""> <!-- Imagen del logo -->
+        <h1>Generación de Reporte o Informes</h1>
+        <button onclick="window.history.back()">Volver</button> <!-- Botón de volver atrás -->
+    </header>
+    <main>
+        <form id="reporteForm" onsubmit="return validateReporte()">
+
+            <div style="text-align: center;">
+            <img class="img-fondologin" src="img/pngcomputerlogo.png" alt="" style="width: 200px; height: auto;">
+            </div>
+
+            <label for="role">Rol:</label>
+            <select id="role" name="role" required>
+                <option value="profesor">Profesor</option>
+                <option value="estudiante">Estudiante</option>
+            </select> <!-- Campo para seleccionar el rol -->
+
+            <label for="periodo">Período:</label>
+            <input type="text" id="periodo" name="periodo" required>
+            <button type="submit">Generar Reporte</button> <!-- Botón de enviar -->
+            <button type="button" onclick="cancelarFormulario()">Cancelar</button> <!-- Botón de cancelar -->
+        </form>
+    </main>
+
+    <div class="fondologin">
+        <img class="img-fondologin" src="img/EL-SILABO-2-2048.png" alt="">
+    </div>
+
+    <footer>
+        <p>&copy; Software de automatización de sílabos para la ULEAM - Todos los derechos reservados</p> 
+        <!-- Pie de página con el año y el nombre de la institución -->
+        <img class="redes-sociales" src="img/redes-sociales.png"> <!-- Logo de la ULEAM -->
+    </footer>
+</body>
+</html>

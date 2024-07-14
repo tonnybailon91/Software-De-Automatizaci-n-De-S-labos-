@@ -1,0 +1,248 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+  
+
+header {
+    background-color: #4CAF50; /* Verde manzana */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: inline-block; /* Para que la imagen se muestre en línea con el texto */
+    vertical-align: middle; /* Alinea verticalmente la imagen */
+    width: 50px; /* Ajusta el ancho de la imagen según sea necesario */
+    height: auto; /* Hace que la altura se ajuste automáticamente al ancho */
+    margin-right: 10px; /* Espacio a la derecha de la imagen */
+}
+
+h1 {
+    margin: 0;
+    display: inline-block; /* Para que el título se muestre en línea con la imagen */
+    vertical-align: middle; /* Alinea verticalmente el título */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 15px;
+}
+
+nav ul li a {
+    color: #00008B; /* Azul oscuro para los enlaces */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.logout {
+    margin-left: auto;
+    color: #00008B; /* Azul oscuro para el enlace de cerrar sesión */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logout:hover {
+    text-decoration: underline;
+}
+
+.informacion {
+    background: rgb(245, 222, 180);
+    padding-top: 1px;
+    width: 90%;
+    margin-left: 4em;
+}
+
+.img-port {
+    width: 100%;
+    margin-top: 3em;
+}
+
+main {
+    padding: 20px;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #e5f4e2; /* Verde manzana más claro */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"],
+button,
+button.volver-btn {
+    background-color: #4CAF50; /* Verde manzana */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover,
+button:hover,
+button.volver-btn:hover {
+    background-color: #45a049; /* Verde manzana más oscuro al pasar el mouse */
+}
+
+.forgot-password {
+    margin-bottom: 10px;
+}
+
+footer {
+    width: 100%;
+    background-color: #4CAF50; /* Verde manzana */
+    position: relative; /* Establece el posicionamiento relativo del footer */
+    text-align: center;
+    padding: 10px 0;
+}
+
+.redes-sociales {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 50px; /* Ajusta el ancho según sea necesario */
+    height: auto; /* Hace que la altura se ajuste automáticamente */
+}
+
+.LOGO-ULEAM-VERTICAL {
+    position: absolute;
+    bottom: 15px;
+    left: 15px; /* Cambiado de right a left */
+    width: 30px; /* Ajusta el ancho según sea necesario */
+    height: auto; /* Hace que la altura se ajuste automáticamente */
+}
+
+
+.fondologin {
+    position: fixed; /* Posición fija para que esté pegado al borde del viewport */
+    bottom: 0; /* Lo posiciona en la parte inferior */
+    left: 0; /* Lo posiciona al inicio del lado izquierdo */
+    width: 100%; /* Ocupa el ancho completo */
+    z-index: -1; /* Coloca la capa por detrás de otros elementos */
+}
+
+.img-fondologin {
+    width: 100%; /* Ajusta el ancho de la imagen al ancho del div */
+    height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos para el modal */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    max-width: 400px;
+    border-radius: 5px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button[type="submit"] {
+    background-color: #4CAF50; /* Verde manzana */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+    background-color: #45a049; /* Verde manzana más oscuro al pasar el mouse */
+}
